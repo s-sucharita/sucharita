@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio using media query</title>
+    <style>
+      body {
+        background-image: url("full-bckgd.webp");
+        background-size: cover;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      header {
+        width: 100%;
+        text-align: center;
+      }
+      @media screen and (max-width: 768px) {
+        .container {
+          flex-direction: row;
+        }
+        .item {
+          background-color: rgb(66, 155, 145);
+        }
+        main ul {
+          background-color: rgb(145, 165, 72);
+          list-style: none;
+          color: white;
+          justify-content: space-evenly;
+          align-items: center;
+          
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .item {
+          background-color: rgb(128, 49, 62);
+        }
+        main ul {
+          background-color: rgb(77, 116, 106);
+          list-style: none;
+
+          color: white;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 5px;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .item {
+          background-color: rgb(73, 102, 145);
+        }
+        main ul {
+          list-style: none;
+          background-color: rgb(113, 107, 158);
+          color: white;
+          display: flex;
+          width: 100%;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 5px;
+        }
+      }
+      footer {
+        display: flex;
+        color: rgb(10, 155, 51);
+        position: absolute;
+        bottom: 0px;
+        right: 737px;
+      }
+      .card-container {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        justify-content: center;
+      }
+      .card1 {
+        background-image: url("canada-flag.gif");
+        background-size: cover;
+        padding: 20px;
+        text-align: auto;
+        border-radius: 10px;
+      }
+      .card2 {
+        background-image: url("Flag_of_New_Zealand.gif");
+        background-size: cover;
+        color: rgb(190, 207, 35);
+        padding: 20px;
+        text-align: auto;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="item">
+          <h1 style="color: white">Sucharita S</h1>
+          <p style="color: white">Welcome to my portfolio page.</p>
+        </div>
+      </header>
+      <main>
+        <ul>
+          <button id="hamburger-menu"></button>
+          <li><h3>Home</h3></li>
+          <li><h3>Achievements</h3></li>
+          <li><h3>Contact</h3></li>
+          <li><h3>Education</h3></li>
+        </ul>
+      </main>
+    </div>
+
+    <section>
+      <h2 style="color: rgb(8, 112, 86)">👋 About Me</h2>
+      <h3 style="color: rgb(93, 86, 132)">
+        Hi, I’m Sucharita — a passionate international admission executive with
+        4+ years of experience supporting students in their journey to global
+        education.
+      </h3>
+      <h3 style="color: rgb(93, 86, 132)">
+        I specialize in managing application pipelines, coordinating with
+        international universities, and ensuring compliance with visa
+        regulations. With a passion for global education and student success,
+        I’ve helped over 700 students gain admission to top universities in
+        Canada and New Zealand.
+      </h3>
+      <h3 style="color: rgb(93, 86, 132)">
+        I bring strong attention to detail, cross-cultural communication skills,
+        and in-depth knowledge of international admission processes.
+      </h3>
+      <div class="card-container">
+        <div class="card1">
+          <h3 style="color: rgba(3, 52, 47, 0.714)">🛠️ Skills & Tools</h3>
+          <ul>
+            <li style="list-style-type: square">Canadian Study Permit</li>
+            <li style="list-style-type: square">Attention to detail</li>
+            <li style="list-style-type: square">Student counseling</li>
+            <li style="list-style-type: square">Email communication</li>
+            <li style="list-style-type: square">MS Excel</li>
+            <li style="list-style-type: square">Google Workspace</li>
+          </ul>
+        </div>
+
+        <div class="card2">
+          <br />
+          <h3 style="color: rgb(47, 27, 203)">🧪 Projects & Initiatives</h3>
+          <ul>
+            <li style="list-style-type: square">
+              <h3>
+                Led monthly webinars for students with guest speakers from NZ
+                universities.
+              </h3>
+            </li>
+            <li style="list-style-type: square">
+              <h3>
+                Achieved a 20% increase in conversion from leads to applicants
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>📬 Contact</h3>
+      <p>📧 Email: sucharita@email.com</p>
+    </section>
+    <footer>&copy; Sucharita 2025</footer>
+  </body>
+</html>

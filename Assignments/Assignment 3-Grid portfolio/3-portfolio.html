@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucharita Portfolio</title>
+    <link rel="stylesheet" href ="3-styles.css">
+    <link rel="icon" type="image/x-icon" href="portfolio-vector-icon.jpg">
+      <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    .container {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(4 1fr);
+        grid-template-rows: 80px 1fr 50px;
+        grid-template-areas: "header header header header"
+                             "aside main main main"
+                             "footer footer footer footer" ;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+            <ul>
+                <li><h3> Home </h3></li>
+                 <li><h3> About</h3></li>
+                  <li> <h3>Contact</h3></li>
+            </ul>
+            
+    </header>
+    <main>
+        <button type="submit" class="submit-button">Submit</button>
+            <h2 color>👋 About Me</h2>
+    <h3>Hi, I’m Sucharita — a passionate international admission executive with 4+ years of experience supporting students in their journey to global education. </h3><h3>I specialize in managing application pipelines, coordinating with international universities, and ensuring compliance with visa regulations.  With a passion for global education and student success, I’ve helped over 700 students gain admission to top universities in Canada and New Zealand.</h3><h3> I bring strong attention to detail, cross-cultural communication skills, and in-depth knowledge of international admission processes.</h3> 
+    <h3><a href="3-skills.html">👉 View my professional skills</a></h3>
+    <h3><a href="3-projects.html">👉 Navigate to the Projects section</a></h3>
+    <p><h3>Please fill the form for more information</h3></p>
+    <form>
+        <label for="name"> Name :  </label>
+        <input type="text" id="name" name="name" required>
+        <label for="mail"> Email :  </label>
+        <input type="email" id="mail" name="mail" required>
+        </form>
+<h3>📬 Contact</h3>
+<ul>
+<li>📧 Email: sucharita@email.com</li>
+</ul>
+    </main>
+    <aside>
+        <br>
+                <ul> <li> <h3>Dashboard </h3></li><br><br><br>
+                 <li> <h3>Notifications</h3></li><br><br><br>
+                  <li> <h3>Analytics</h3></li><br><br><br>
+                  <li><h3>Likes </h3></li><br><br><br>
+                 <li><h3>Wallets</h3></li> <br><br><br><br>
+                  <li> <h3>Logout</h3></li>
+            </ul>
+    </aside>
+    <footer>
+        &copy; Sucharita 2025
+    </footer>
+    </div>
+</body>
+</html>
