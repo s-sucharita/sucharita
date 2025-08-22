@@ -1,0 +1,88 @@
+    body {
+        background: linear-gradient(135deg, #71bbb2 0%, #efe9d5 100%);
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .calculator {
+        width: 350px;
+        margin: 40px auto 0 auto;
+        padding: 30px 25px 20px 25px;
+        background: #efe9d5;
+        border-radius: 18px;
+
+        text-align: center;
+      }
+
+      h2 {
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+        color: #71bbb2;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      input[type="number"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #497d74;
+        border-radius: 8px;
+        font-size: 1.1em;
+        transition: border-color 0.2s;
+      }
+
+      input[type="number"]:focus {
+        border-color: #71bbb2;
+        outline: none;
+      }
+
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin: 18px 0;
+      }
+
+      .buttons button {
+        background: linear-gradient(135deg, #497d74 0%, #71bbb2 100%);
+        border: none;
+        color: #27445d;
+        font-size: 1.2em;
+        padding: 12px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .buttons button:hover {
+        background: linear-gradient(135deg, #71bbb2 0%, #efe9d5 100%);
+      }
+
+      #result {
+        margin: 18px 0 10px 0;
+        font-size: 1.2em;
+        color: #27445d;
+        background: #71bbb2;
+        border-radius: 8px;
+        padding: 10px;
+        min-height: 32px;
+        text-align: center;
+      }
+
+      #reset {
+        display: block;
+        margin: 0 auto 10px auto;
+        background: linear-gradient(135deg, #71bbb2 0%, #497d74 100%);
+        color: #27445d;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 8px;
+        font-size: 1.1em;
+        cursor: pointer;
+      }
+
+      #reset:hover {
+        background: linear-gradient(135deg, #497d74 0%, #efe9d5 100%);
+      }
