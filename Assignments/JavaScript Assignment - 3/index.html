@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+     <!-- Adding i/p textfield and add button using forms -->
+      <div class="d-flex justify-content-center" style="margin-top: 100px; height: 70%; width: 98%;">
+  <img src="Hii.gif" alt="Sample">
+</div>
+   
+<div class="container d-flex justify-content-center align-items-center;">
+    <div class="row justify-content-center" style="width: 80vw; height: 80vh;">
+        <div class="col-md-6 col-lg-3 d-flex align-items-center" style="height: 85%; width: 41%;">
+            <div class="card" style="width: 100%; height: 100%;">
+                <div class="card-body img-fluid rounded shadow 5em">
+                    <h5 class="card-title" style="text-align:center;font: 2em sans-serif; font-family:cursive; color: #b26c6c;">
+                        <i>📌 To-Do List</i></h5> <br>
+                    <div class="card-text img-fluid rounded shadow 5em" style="font-family: 'Dancing Script', cursive; letter-spacing: 1px; opacity: 100%;">
+                        <form id="todoform" style="font-size: 1.2em; text-align:center;">
+                         <input type="text" id="addInput" placeholder="Enter the text"> 
+                        <input type="button" id="addButton" value="Add" style="color: rgb(157, 68, 70);">
+                        </form>
+                        <ul id="todolist" style="font-size: 1em; justify-content: center; color: rgb(104, 49, 50);" ></ul>
+                        <script>
+                              let input=document.getElementById('addInput'); //to get the i/p from the user
+                              let addButton=document.getElementById('addButton'); // to add the i/p 
+                              let toDoList=document.getElementById('todolist'); // displaying the added input line by line
+                              let deleteButton=document.getElementsByClassName('delete'); //to delete the added i/p
+                              let editButton=document.getElementsByClassName('edit'); //to edit the added i/p
+                              let toggleButton=document.getElementsByClassName('toggle'); //to tick the added i/p
+                            
+
+                               addButton.addEventListener('click', function(){    //function definition for adding the i/p if add button is clicked and displaying it one by one
+                             let textInput=input.value;    //assigning the i/p received to a variable
+                            //next, an html is created inside the script tag to delete the added inputs 
+                           let html=`                    
+                              <li >
+                                <span style= "margin-right: 50px;">${textInput}</span>
+                             
+                                <button class="toggle"  style= "margin-right: 5px; color: rgb(157, 68, 70);">Done</button>
+                              <button class="delete" style= "margin-right: 5px; color: rgb(157, 68, 70);">Delete</button>
+                              <button class="edit" style= "margin-right: 5px; color: rgb(157, 68, 70);">Edit</button> <br><br>
+                            
+                              
+                              </li>
+                                  `   
+                           toDoList.insertAdjacentHTML('beforeend',html); // to insert the inputs line by line
+                           input.value="";   //clear the i/p textfield
+                     });
+                    function handleDelete(event)   // function definition to delete an i/p in the list
+        {
+            if(event.target.classList.contains('delete'))  // if we click a certain delete button, that i/p should be deleted from the list
+        {
+            event.target.parentElement.remove(); // deletion process done
+        }
+        if(event.target.classList.contains('edit'))  // if we click a certain edit button, that i/p should be edited in the list
+        {
+           let newText = prompt("Enter the new text:");
+                event.target.parentElement.querySelector('span').innerHTML = `${newText}`;
+            
+        }
+        if(event.target.classList.contains('toggle'))  // if we click a certain toggle button, that i/p should be striked through in the list
+        {
+           let textInput=event.target.parentElement.querySelector('span').innerHTML;
+           if(textInput || newText){
+            event.target.parentElement.querySelector('span').innerHTML = `<strike>${textInput}</strike>`;
+           }
+           else{
+            alert("No text to strike through");
+           }
+          
+        }
+  
+
+     };
+         toDoList.addEventListener('click',handleDelete); // function call for the full To-do list program with a handle (you can check if the click originated from a delete button by inspecting the event target).
+        
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+   
+
+    //    const addTaskBtn = document.getElementById('addTaskBtn');
+    //     addTaskBtn.addEventListener('click', () => {
+</script>
+ <script src="script.js"></script>
+</html>
