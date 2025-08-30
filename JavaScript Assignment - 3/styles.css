@@ -1,0 +1,16 @@
+body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 100vh;
+            margin: 0;
+            
+        }
+
+.card-body {
+    background-image: url(notes.jpg); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+}
