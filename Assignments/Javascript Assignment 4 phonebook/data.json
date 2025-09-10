@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Alice ", "phone": "+91 9876543210" },
+    { "id": 2, "name": "Benjamin", "phone": "+91 8876543219" },
+    { "id": 3, "name": "Catherine", "phone": "+91 7876543218" },
+    { "id": 4, "name": "Don", "phone": "+91 6876543217" },
+    { "id": 5, "name": "Eshan", "phone": "+91 5876543216" }
+
+]
